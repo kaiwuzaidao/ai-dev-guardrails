@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI 开发不失控"
+  short_description: "提炼项目的开发边界，把容易漏掉的业务规则变成本地和 CI 可运行的检查"
+  default_prompt: "用 $ai-dev-guardrails 检查这个项目，找出一条 AI 改动最容易破坏的契约，并给出能验证它的最小用例。"

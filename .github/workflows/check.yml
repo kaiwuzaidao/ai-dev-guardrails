@@ -1,0 +1,12 @@
+name: CLI contract example
+on: [push, pull_request]
+permissions:
+  contents: read
+
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - working-directory: skills/ai-dev-guardrails
+        run: python3 -B -m unittest discover -s examples/cli-contract -p 'test_*.py' -v
